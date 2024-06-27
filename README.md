@@ -1,9 +1,7 @@
-# Pathogen Repo Guide
+# ARV Repo Guide
 
-This is a Nextstrain pathogen repository guide for setting up a pathogen
-repo to hold the files necessary to run and maintain a Nextstrain pathogen build.
+This is a repository to hold the files necessary to 
+run and maintain a Nextstrain build for avian orthoreovirus (ARV). 
 
-Using this guide will allow you to start with the general repository
-and workflow organization that is expected of a Nextstrain maintained pathogen.
-However, the workflows will require customizations to support your specific pathogen
-and should not be expected to "just work".
+Repository was created from a template of [pathogen-repo-guide](https://github.com/nextstrain/pathogen-repo-guide) on 27Jun2024 
+based on directions in the Nextstrain tutorial [Creating an ingest workflow](https://docs.nextstrain.org/en/latest/tutorials/creating-a-pathogen-repo/creating-an-ingest-workflow.html).
