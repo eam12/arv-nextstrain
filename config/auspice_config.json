@@ -1,0 +1,43 @@
+{
+  "title": "Avian orthoreovirus: TEST",
+  "maintainers": [
+    {"name": "Elizabeth A. Miller", "url": ""}
+  ],
+  "build_url": "https://github.com/eam12/arv-nextstrain",
+  "colorings": [
+    {
+      "key": "num_date",
+      "title": "Date",
+      "type": "continuous"
+    },
+    {
+      "key": "country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "region",
+      "title": "Region",
+      "type": "categorical"
+    },
+    {
+      "key": "host",
+      "title": "Host",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "region",
+    "country"
+  ],
+  "display_defaults": {
+    "map_triplicate": true,
+    "color_by": "country"
+  },
+  "filters": [
+    "host",
+    "region",
+    "country"
+  ]
+}
+

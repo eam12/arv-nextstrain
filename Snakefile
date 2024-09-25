@@ -2,15 +2,15 @@
 SEGMENTS = ["L1", "S1"]
 
 
-# """This rule tells Snakemake that at the end of the pipeline, you should have
-# generated JSON files in the auspice folder for each segment."""
-# rule all:
-#     input:
-#         auspice_json = expand("auspice/arv-nextstrain_{segment}.json", segment=SEGMENTS)
-
+"""This rule tells Snakemake that at the end of the pipeline, you should have
+generated JSON files in the auspice folder for each segment."""
 rule all:
     input:
-        alignment = expand("results/aligned_{segment}.fasta", segment=SEGMENTS)
+        auspice_json = expand("auspice/arv-nextstrain_{segment}.json", segment=SEGMENTS)
+
+# rule all:
+#     input:
+#         tree = expand("results/tree_{segment}.nwk", segment=SEGMENTS)
 
 """Specify all input files here. Specify here sequences.fasta and metadata.tsv files (required. Also any files denoting specific strains to include or drop,
 references sequences, and files for auspice visualization"""
@@ -18,7 +18,8 @@ rule files:
     params:
         input_sequences = "data/sequences_{segment}.fasta",
         metadata = "data/metadata_{segment}.tsv",
-        reference = "config/reference_{segment}.gb"
+        reference = "config/reference_{segment}.gb",
+        auspice_config = "config/auspice_config.json"
 
 files = rules.files.params
 
@@ -80,6 +81,8 @@ specific rules."""
 #             --non-nucleotide
 #         """
 
+# augur align: Align multiple sequences from FASTA
+# https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/align.html
 
 rule align:
     message:
@@ -102,10 +105,90 @@ rule align:
         """
 
 
+# augur tree: Build a tree using a variety of methods
+# https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/tree.html
+
+rule tree:
+    message: "Building tree"
+    input:
+        alignment = rules.align.output.alignment
+    output:
+        tree = "results/tree-raw_{segment}.nwk"
+    params:
+        method = "iqtree",
+        model = "auto"
+    shell:
+        """
+        augur tree \
+            --alignment {input.alignment} \
+            --output {output.tree} \
+            --method {params.method} \
+            --substitution-model {params.model} \
+            --nthreads 1
+        """
 
 
+# augur refine: Refine an initial tree using sequence metadata
+# https://docs.nextstrain.org/projects/augur/en/26.0.0/usage/cli/refine.html
+# TreeTime: https://treetime.readthedocs.io/en/latest/index.html
+rule refine:
+    message:
+        """
+        Refining tree
+          - estimate timetree
+        """
+    input:
+        tree = rules.tree.output.tree,
+        alignment = rules.align.output,
+        metadata = files.metadata
+    output:
+        tree = "results/tree_{segment}.nwk",
+        node_data = "results/branch-lengths_{segment}.json"
+    params:
+        metadata_id = "accession",
+        divergence_units = "mutations"
+    shell:
+        """
+        augur refine \
+            --tree {input.tree} \
+            --alignment {input.alignment} \
+            --metadata {input.metadata} \
+            --metadata-id-columns {params.metadata_id} \
+            --divergence-units {params.divergence_units} \
+            --output-tree {output.tree} \
+            --output-node-data {output.node_data} \
+        """
 
 
+"""This rule exports the results of the pipeline into JSON format, which is required
+for visualization in auspice. To make changes to the categories of metadata
+that are colored, or how the data is visualized, alter the auspice_config files"""
+rule export:
+    message: "Exporting data files for for auspice"
+    input:
+        tree = rules.refine.output.tree,
+        metadata = files.metadata,
+        auspice_config = files.auspice_config
+    output:
+        auspice_json = "auspice/arv-nextstrain_{segment}.json"
+    params:
+        metadata_id = "accession"
+    shell:
+        """
+        augur export v2 \
+            --tree {input.tree} \
+            --metadata {input.metadata} \
+            --metadata-id-columns {params.metadata_id} \
+            --auspice-config {input.auspice_config} \
+            --output {output.auspice_json}
+        """
 
 
+# rule clean:
+#     message: "Removing directories: {params}"
+#     params:
+#         "results ",
+#         "auspice"
+#     shell:
+#         "rm -rfv {params}"
 
