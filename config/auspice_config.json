@@ -4,11 +4,20 @@
     {"name": "Elizabeth A. Miller", "url": ""}
   ],
   "build_url": "https://github.com/eam12/arv-nextstrain",
+  "panels": [ 
+    "tree",
+    "map"
+  ],
   "colorings": [
     {
-      "key": "num_date",
-      "title": "Date",
-      "type": "continuous"
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
+    {
+      "key": "date",
+      "title": "Sampling Date",
+      "type": "categorical"
     },
     {
       "key": "country",
