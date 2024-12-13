@@ -1,24 +1,24 @@
-strain	accession	date	region	country	division	host	segment	virus	
-875-Bi-05	KX398248.1	2005-XX-XX	Europe	Hungary		Chicken	S1	arv	
-D10	MN879690.1	2014-11-06	North America	Canada		Chicken	S1	arv	
-Reo/NC/Broiler/R1837308/18	OR546357.1	2018-XX-XX	North America	USA	NC	Chicken	S1	arv	
-138	AF218359.1	1992-XX-XX	North America	Canada		Chicken	S1	arv	
-S1133	KF741772.1	1971-XX-XX	North America	USA		Chicken	S1	arv	
-176	AF218358.1	1982-XX-XX	North America	USA	GA	Chicken	S1	arv	
-1733	KF741712.1	1983-XX-XX	North America	USA		Chicken	S1	arv	
-19831M09	KR997905.1	2009-XX-XX	Europe	Hungary		Turkey	S1	arv	
-815-12	KC508653.1	2010-09-29	Asia	China		Muscovy duck	S1	arv	
-Broiler/SDJN01/China/2020	ON807302.1	2020-10-26	Asia	China		Chicken	S1	arv	
-CD200801	OP090026.1	2020-XX-XX	Asia	China		Swan	S1	arv	
-D2533/4/1-10	MH520081.1	2014-XX-XX	Europe	Germany		Duck	S1	arv	
-DH13	MH510261.1	2013-09-XX	Asia	China		Muscovy duck	S1	arv	
-Reo/PA/Layer/01224A/14	KT428304.1	2014-XX-XX	North America	USA	PA	Chicken	S1	arv	
-03G	JX145334.1	2013-XX-XX	Asia	China		Goose	S1	arv	
-T1781	KC865792.1	2012-XX-XX	Europe	Hungary		Chicken	S1	arv	
-GuangxiR1	KC183744.1	2000-04-10	Asia	China		Chicken	S1	arv	
-K1600657	MK583337.1	2016-XX-XX	North America	USA		Chicken	S1	arv	
-YH	DQ198854.1	2005-XX-XX	Asia	China		Muscovy duck	S1	arv	
-LY383	MF183217.1	2017-03-29	Asia	China		Chicken	S1	arv	
-Reo/Turkey/HUN188/2016	OQ731506.1	2016-XX-XX	Europe	Hungary		Turkey	S1	arv	
-TRV-S2	PP657714.1	2004-XX-XX	Europe	Germany		Turkey	S1	arv	
-Alabama	OR612129.1	2021-XX-XX	North America	USA	AL	Chicken	S1	arv	
+strain	accession	date	year	region	country	division	host	segment	virus	db	url	authors	title	journal	pubmed	paper_url
+875-Bi-05	KX398248.1	2005-XX-XX	2005	Europe	Hungary		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KX398248	Farkas et al.	"Lineage diversification, homo- and heterologous reassortment and recombination shape the evolution of chicken orthoreoviruses"	"Sci Rep 6, 36960 (2016)"	27830770	https://pubmed.ncbi.nlm.nih.gov/27830770/
+D10	MN879690.1	2014-11-06	2014	North America	Canada		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/MN879690	Ayalew et al.	The dynamics of molecular evolution of emerging avian reoviruses through accumulation of point mutations and genetic re-assortment	"Virus Evol 6 (1), veaa025 (2020)"	32411390	
+Reo/NC/Broiler/R1837308/18	OR546357.1	2018-XX-XX	2018	North America	USA	NC	Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/OR546357	Nour et al.	"Whole genomic constellation of avian reovirus strains isolated from broilers with arthritis in North Carolina, USA"	"Viruses 15 (11), 1-23 (2023)"	38005869	
+138	AF218359.1	1992-XX-XX	1992	North America	Canada		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/AF218359	Shmulevitz et al.	Sequential partially overlapping gene arrangement in the tricistronic S1 genome segments of avian reovirus and Nelson Bay reovirus: implications for translation initiation	"J. Virol. 76 (2), 609-618 (2002)"	11752152	
+S1133	KF741772.1	1973-XX-XX	1973	North America	USA		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KF741772					
+176	AF218358.1	1982-XX-XX	1982	North America	USA	GA	Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/AF218358					
+1733	KF741712.1	1983-XX-XX	1983	North America	USA		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KF741712					
+19831M09	KR997905.1	2009-XX-XX	2009	Europe	Hungary		Turkey	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KR997905					
+815-12	KC508653.1	2010-09-29	2010	Asia	China		Muscovy duck	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KC508653					
+Broiler/SDJN01/China/2020	ON807302.1	2020-10-26	2020	Asia	China		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/ON807302					
+CD200801	OP090026.1	2020-XX-XX	2020	Asia	China		Swan	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/OP090026					
+D2533/4/1-10	MH520081.1	2014-XX-XX	2014	Europe	Germany		Duck	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/MH520081					
+DH13	MH510261.1	2013-09-XX	2013	Asia	China		Muscovy duck	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/MH510261					
+Reo/PA/Layer/01224A/14	KT428304.1	2014-XX-XX	2014	North America	USA	PA	Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KT428304					
+03G	JX145334.1	2013-XX-XX	2013	Asia	China		Goose	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/JX145334					
+T1781	KC865792.1	2012-XX-XX	2012	Europe	Hungary		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KC865792					
+GuangxiR1	KC183744.1	2000-04-10	2000	Asia	China		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/KC183744					
+K1600657	MK583337.1	2016-XX-XX	2016	North America	USA		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/MK583337					
+YH	DQ198854.1	2005-XX-XX	2005	Asia	China		Muscovy duck	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/DQ198854					
+LY383	MF183217.1	2017-03-29	2017	Asia	China		Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/MF183217					
+Reo/Turkey/HUN188/2016	OQ731506.1	2016-XX-XX	2016	Europe	Hungary		Turkey	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/OQ731506					
+TRV-S2	PP657714.1	2004-XX-XX	2004	Europe	Germany		Turkey	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/PP657714					
+Alabama	OR612129.1	2021-XX-XX	2021	North America	USA	AL	Chicken	S1	ARV	NCBI GenBank	https://www.ncbi.nlm.nih.gov/nuccore/OR612129					

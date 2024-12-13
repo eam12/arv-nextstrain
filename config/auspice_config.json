@@ -1,5 +1,7 @@
 {
-  "title": "Avian orthoreovirus: TEST",
+  "version": "v1",
+  "meta": {
+  "title": "Avian orthoreovirus",
   "maintainers": [
     {"name": "Elizabeth A. Miller", "url": ""}
   ],
@@ -30,6 +32,11 @@
       "type": "categorical"
     },
     {
+      "key": "division",
+      "title": "State",
+      "type": "categorical"
+    },
+    {
       "key": "host",
       "title": "Host",
       "type": "categorical"
@@ -37,16 +44,18 @@
   ],
   "geo_resolutions": [
     "region",
-    "country"
+    "country",
+    "division"
   ],
   "display_defaults": {
     "map_triplicate": true,
-    "color_by": "country"
+    "color_by": "host"
   },
   "filters": [
     "host",
     "region",
-    "country"
+    "country",
+    "division"
   ]
 }
 
