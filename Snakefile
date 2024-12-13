@@ -19,7 +19,8 @@ rule files:
         input_sequences = "data/sequences_{segment}.fasta",
         metadata = "data/metadata_{segment}.tsv",
         reference = "config/refs/reference_{segment}.gb",
-        auspice_config = "config/auspice_config.json"
+        auspice_config = "config/auspice_config.json",
+        lat_longs = "config/lat_longs.tsv"
 
 files = rules.files.params
 
@@ -168,6 +169,7 @@ rule export:
     input:
         tree = rules.refine.output.tree,
         metadata = files.metadata,
+        lat_longs = files.lat_longs,
         node_data = rules.refine.output.node_data,
         auspice_config = files.auspice_config
     output:
@@ -181,6 +183,7 @@ rule export:
             --metadata {input.metadata} \
             --metadata-id-columns {params.metadata_id} \
             --node-data {input.node_data} \
+            --lat-longs {input.lat_longs} \
             --auspice-config {input.auspice_config} \
             --output {output.auspice_json}
         """

@@ -1,10 +1,10 @@
-strain	accession	date	region	country	division	host	segment	virus
+strain	accession	date	region	country	state	host	segment	virus
 D10	MN879684.1	2014-11-06	North America	Canada		Chicken	L1	arv
 875-Bi-05	KX398242.1	2005-XX-XX	Europe	Hungary		Chicken	L1	arv
-Reo/NC/Broiler/R1837308/18	OR546351.1	2018-XX-XX	North America	USA	NC	Chicken	L1	arv
+Reo/NC/Broiler/R1837308/18	OR546351.1	2018-XX-XX	North America	USA	North Carolina	Chicken	L1	arv
 138	EU707933.1	1992-XX-XX	North America	Canada		Chicken	L1	arv
 S1133	KF741756.1	1971-XX-XX	North America	USA		Chicken	L1	arv
-176	EU707934.1	1982-XX-XX	North America	USA	GA	Chicken	L1	arv
+176	EU707934.1	1982-XX-XX	North America	USA	Georgia	Chicken	L1	arv
 1733	AY641741.1	1983-XX-XX	North America	USA		Chicken	L1	arv
 2408	AY641742.1	1983-XX-XX	North America	USA		Chicken	L1	arv
 916	AY641737.1	1992-XX-XX	Asia	Taiwan		Chicken	L1	arv
@@ -17,9 +17,9 @@ D2533/4/1-10	MH520075.1	2014-XX-XX	Europe	Germany		Duck	L1	arv
 DH13	MH510255.1	2013-09-XX	Asia	China		Muscovy duck	L1	arv
 K738/14	MF686695.1	2014-XX-XX	Asia	South Korea		Chicken	L1	arv
 OS161	AY641743.1	1970-XX-XX	Asia	Japan		Chicken	L1	arv
-Reo/PA/Layer/01224A/14	KT428298.1	2014-XX-XX	North America	USA	PA	Chicken	L1	arv
+Reo/PA/Layer/01224A/14	KT428298.1	2014-XX-XX	North America	USA	Pennsylvania	Chicken	L1	arv
 03G	JX145328.1	2013-XX-XX	Asia	China		Goose	L1	arv
-Turkey/USA/IA/2013/TARV-MN10	KJ865906.1	2013-XX-XX	North America	USA	IA	Turkey	L1	arv
+Turkey/USA/IA/2013/TARV-MN10	KJ865906.1	2013-XX-XX	North America	USA	Iowa	Turkey	L1	arv
 T6	DQ238094.1	1970-XX-XX	Asia	Taiwan		Chicken	L1	arv
 T1781	KC865786.1	2012-XX-XX	Europe	Hungary		Chicken	L1	arv
 GuangxiR1	KC183748.1	2000-04-10	Asia	China		Chicken	L1	arv
